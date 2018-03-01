@@ -1,0 +1,122 @@
+html {
+  font-size: 20px
+}
+
+/*--- Animation ---*/
+
+.pt-perspective {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.pt-page-current,
+.no-js .pt-page {
+  visibility: visible;
+  z-index: 1;
+}
+
+.pt-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.pt-page-1 {
+  background: #0ac2d2;
+}
+
+.pt-page-2 {
+  background: #7bb7fa;
+}
+
+.pt-page-3 {
+  background: #60d7a9;
+}
+
+.pt-page-4 {
+  background: #fdc162;
+}
+
+.pt-page-5 {
+  background: #fd6a62;
+}
+
+.pt-page-6 {
+  background: #f68dbb;
+}
+
+/* Partie déformation */
+
+.pt-page-scaleDown {
+  -webkit-animation: scaleDown .7s ease both;
+  animation: scaleDown .7s ease both;
+}
+
+.pt-page-scaleUpDown {
+  -webkit-animation: scaleUpDown .5s ease both;
+  animation: scaleUpDown .5s ease both;
+}
+
+.pt-page-scaleDownUp {
+  -webkit-animation: scaleDownUp .5s ease both;
+  animation: scaleDownUp .5s ease both;
+}
+
+.pt-page-scaleUp {
+  -webkit-animation: scaleUp .7s ease both;
+  animation: scaleUp .7s ease both;
+}
+
+.pt-page-delay300 {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+@-webkit-keyframes scaleDown {
+  from { }
+  to { opacity: 0; -webkit-transform: scale(.8); }
+}
+@keyframes scaleDown {
+  from { }
+  to { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+
+@-webkit-keyframes scaleUpDown {
+  from { opacity: 0; -webkit-transform: scale(1.2); }
+}
+@keyframes scaleUpDown {
+  from { opacity: 0; -webkit-transform: scale(1.2); transform: scale(1.2); }
+}
+
+@-webkit-keyframes scaleDownUp {
+  from { }
+  to { opacity: 0; -webkit-transform: scale(1.2); }
+}
+@keyframes scaleDownUp {
+  from { }
+  to { opacity: 0; -webkit-transform: scale(1.2); transform: scale(1.2); }
+}
+
+@-webkit-keyframes scaleUp {
+  from { opacity: 0; -webkit-transform: scale(.8); }
+}
+@keyframes scaleUp {
+  from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}

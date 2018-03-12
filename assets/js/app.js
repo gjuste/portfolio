@@ -1,4 +1,4 @@
-var PageTransitions = (function() {
+var PageTransitions = function() {
 
   var $main = $( '#pt-main' ),
     $pages = $main.children( 'div.pt-page' ),
@@ -14,7 +14,7 @@ var PageTransitions = (function() {
       'OAnimation' : 'oAnimationEnd',
       'msAnimation' : 'MSAnimationEnd',
       'animation' : 'animationend'
-    },
+    };
 
   function init() {
 
@@ -109,4 +109,4 @@ var PageTransitions = (function() {
     nextPage : nextPage,
   };
 
-})();
+}();

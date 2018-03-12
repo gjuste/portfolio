@@ -2,7 +2,28 @@ html {
   font-size: 20px
 }
 
-/*--- Animation ---*/
+/* --- Animation --- */
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.no-js body {
+  overflow: auto;
+}
+
+.pt-page-ontop {
+  z-index: 999;
+}
 
 .pt-perspective {
   position: relative;
@@ -11,12 +32,6 @@ html {
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
   perspective: 1200px;
-}
-
-.pt-page-current,
-.no-js .pt-page {
-  visibility: visible;
-  z-index: 1;
 }
 
 .pt-page {
@@ -36,6 +51,12 @@ html {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+}
+
+.pt-page-current,
+.no-js .pt-page {
+  visibility: visible;
+  z-index: 1;
 }
 
 .pt-page-1 {
@@ -62,7 +83,7 @@ html {
   background: #f68dbb;
 }
 
-/* Partie déformation */
+/* --- Partie déformation --- */
 
 .pt-page-scaleDown {
   -webkit-animation: scaleDown .7s ease both;

@@ -1,122 +1,165 @@
-html {
-  font-size: 20px
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
-/*--- Animation ---*/
-
-.pt-perspective {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  -webkit-perspective: 1200px;
-  -moz-perspective: 1200px;
-  perspective: 1200px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
 }
-
-.pt-page-current,
-.no-js .pt-page {
-  visibility: visible;
-  z-index: 1;
+body {
+  line-height: 1;
 }
-
-.pt-page {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+body {
+  color: #ffffff;
+  background-color: #22283f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
+.cd-section {
+  height: 100vh;
+}
+.cd-section:first-of-type > div {
+  background-color: #2b334f;
+}
+.cd-section:nth-of-type(2) > div {
+  background-color: #2e5367;
+}
+.cd-section:nth-of-type(3) > div {
+  background-color: #267481;
+}
+.cd-section:nth-of-type(4) > div {
+  background-color: #fcb052;
+}
+.cd-section:nth-of-type(5) > div {
+  background-color: #f06a59;
+}
+.cd-section h2 {
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2.4rem;
+}
+.cd-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+.cd-section > div {
+    visibility: visible;
+  }
+.cd-section.visible > div {
+    z-index: 1;
+  }
 
-.pt-page-1 {
-  background: #0ac2d2;
-}
 
-.pt-page-2 {
-  background: #7bb7fa;
-}
+  .cd-section:first-of-type > div::before {
+    display: none;
+  }
 
-.pt-page-3 {
-  background: #60d7a9;
-}
+  .cd-section > div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Force Hardware Acceleration */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  [data-hijacking="on"] .cd-section > div {
+    position: absolute;
+  }
+  [data-animation="rotate"] .cd-section > div {
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
 
-.pt-page-4 {
-  background: #fdc162;
-}
 
-.pt-page-5 {
-  background: #fd6a62;
+.cd-vertical-nav {
+  /* lateral navigation */
+  position: fixed;
+  z-index: 1;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
 }
+.cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  /* image replace */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+}
+.cd-vertical-nav a.cd-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+  .cd-vertical-nav {
+    display: block;
+  }
 
-.pt-page-6 {
-  background: #f68dbb;
-}
-
-/* Partie déformation */
-
-.pt-page-scaleDown {
-  -webkit-animation: scaleDown .7s ease both;
-  animation: scaleDown .7s ease both;
-}
-
-.pt-page-scaleUpDown {
-  -webkit-animation: scaleUpDown .5s ease both;
-  animation: scaleUpDown .5s ease both;
-}
-
-.pt-page-scaleDownUp {
-  -webkit-animation: scaleDownUp .5s ease both;
-  animation: scaleDownUp .5s ease both;
-}
-
-.pt-page-scaleUp {
-  -webkit-animation: scaleUp .7s ease both;
-  animation: scaleUp .7s ease both;
-}
-
-.pt-page-delay300 {
-  -webkit-animation-delay: .3s;
-  animation-delay: .3s;
-}
-
-@-webkit-keyframes scaleDown {
-  from { }
-  to { opacity: 0; -webkit-transform: scale(.8); }
-}
-@keyframes scaleDown {
-  from { }
-  to { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
-}
-
-@-webkit-keyframes scaleUpDown {
-  from { opacity: 0; -webkit-transform: scale(1.2); }
-}
-@keyframes scaleUpDown {
-  from { opacity: 0; -webkit-transform: scale(1.2); transform: scale(1.2); }
-}
-
-@-webkit-keyframes scaleDownUp {
-  from { }
-  to { opacity: 0; -webkit-transform: scale(1.2); }
-}
-@keyframes scaleDownUp {
-  from { }
-  to { opacity: 0; -webkit-transform: scale(1.2); transform: scale(1.2); }
-}
-
-@-webkit-keyframes scaleUp {
-  from { opacity: 0; -webkit-transform: scale(.8); }
-}
-@keyframes scaleUp {
-  from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
-}

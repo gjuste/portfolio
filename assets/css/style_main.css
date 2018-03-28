@@ -1,0 +1,104 @@
+/* --- Général --- */
+@font-face {
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/Libre_Franklin/LibreFranklin-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lobster/Lobster-Regular.ttf") format("truetype");
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  color: white;
+  font-size: 12px;
+}
+
+h1, a {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-family: "Lobster", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.paragraphe {
+  font-size: 1.6rem;
+  margin: 1vh 2vw 1vh 2vw;
+}
+
+.paragraphe span {
+  color: #ffcc68;
+}
+
+/* --- Pages --- */
+.pt-page {
+  background: #0f0f0f;
+}
+
+.pt-page-2, .pt-page-3, .pt-page-4 {
+  overflow: auto;
+}
+
+.page__entrance {
+  text-shadow: 1.5px 1.5px white;
+  color: #ffb600;
+}
+
+/* --- Footer --- */
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 8vh;
+  background: rgba(20, 20, 20, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 1.6rem;
+}
+
+footer a {
+  margin: 5px 10px 5px 10px;
+}
+
+.footer__overflow {
+  position: sticky;
+  bottom: -1px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  margin: 5px 10px 5px 10px;
+}
+

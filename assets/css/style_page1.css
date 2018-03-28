@@ -1,0 +1,149 @@
+/* Page 1 */
+.page1__main {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+.page1__main > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex: 1;
+}
+
+.page1__photo {
+  align-items: center;
+  flex: 1.8;
+}
+
+.page1__photo img{
+  width: 30vw;
+  height: auto;
+  overflow:hidden;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  transition: border 0.3s, box-sizing 0.3s ease-in-out;
+}
+
+.page1__photo img:hover {
+  border: 4px solid #ffb600;
+  box-sizing: content-box;
+}
+
+.page1__menu {
+  align-items: center;
+  flex: 2;
+}
+
+.page1__title {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.page1__title h1 {
+  font-size: 6vw;
+  margin: 0px;
+  text-shadow: 3px 3px #424242;
+}
+
+.page1__title h2 {
+  font-size: 4vw;
+  position: relative;
+  top: -2vw;
+  left: 11vw;
+  color: #ffb600;
+  text-shadow: 1.5px 1.5px white;
+  margin: 0px;
+}
+
+.page1__lien {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.page1__lien a {
+  position: relative;
+  font-size: 3vw;
+  margin-top: 2vh;
+  transition: text-shadow 0.3s, color 0.3s ease-in-out;
+}
+
+.page1__lien a:hover {
+  text-shadow: 1.5px 1.5px white;
+  color: #ffb600;
+}
+
+.hover_lien_apropos {
+  text-shadow: 1.5px 1.5px white;
+  color: #ffb600;
+}
+
+.page1__lien a:first-of-type {
+  margin-top: 7vh;
+}
+
+@media screen and (max-width: 780px) {
+  .page1__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .page1__photo img{
+    width: auto;
+    height: 40vh;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .page1__menu {
+    justify-content: center;
+    flex: 1;
+  }
+
+  .page1__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    height: auto;
+  }
+
+  .page1__title h1 {
+    font-size: 13vw;
+  }
+
+  .page1__title h2 {
+    font-size: 8vw;
+    top: -3vw;
+    left: 16vw;
+  }
+
+  .page1__lien {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 2;
+  }
+
+  .page1__lien a {
+    font-size: 7.5vw;
+  }
+
+  .page1__lien a:first-of-type {
+    margin-top: 2vh;
+  }
+}

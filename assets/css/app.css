@@ -59,8 +59,8 @@ body {
   height: 40px;
   width: 40px;
   z-index: 1;
-  top: 4%;
-  left: 1%;
+  top: 4vh;
+  left: 1vw;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);

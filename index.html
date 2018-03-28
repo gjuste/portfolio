@@ -4,7 +4,11 @@
     <meta name="google-site-verification" content="7cygmhQAl9I6ShQdQ2uXuyddLnrb5KqA_yD_CCv8zQU" />
     <title>Portfolio de JUSTE Gaétan</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style_main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style_page1.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style_page2.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style_page3.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style_page4.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Je m'appelle JUSTE Gaétan, et voici mon portfolio. Réaliser lors de mes études en MMI à l'IUT d'Angoulême, il vous montrera ce que je sais faire et ce que je pourrais faire pour vous.">
@@ -17,18 +21,20 @@
 
       <div class="pt-page pt-page-1">
 
-        <div class="page1__photo">
-          <img src="assets/img/photo_couv_reduite.png" alt="photo_présentation">
-        </div>
-        <div class="page1__menu">
-          <div class="page1__titre">
-            <h1>Mon portfolio</h1>
-            <h2>par Gaétan Juste</h2>
+        <div class="page1__main">
+          <div class="page1__photo">
+            <img src="assets/img/photo-couv.png" alt="photo_présentation">
           </div>
-          <div class="page1__lien">
-            <a href="#presentation" class="pageAnimation" data-page="2">A PROPOS</a>
-            <a href="#realisations" class="pageAnimation" data-page="3">MES RÉALISATIONS</a>
-            <a href="#contact" class="pageAnimation" data-page="4">CONTACTEZ-MOI</a>
+          <div class="page1__menu">
+            <div class="page1__title">
+              <h1>Mon portfolio</h1>
+              <h2>par Gaétan Juste</h2>
+            </div>
+            <div class="page1__lien">
+              <a href="#presentation" class="pageAnimation" data-page="2">A PROPOS</a>
+              <a href="#realisations" class="pageAnimation" data-page="3">MES RÉALISATIONS</a>
+              <a href="#contact" class="pageAnimation" data-page="4">CONTACTEZ-MOI</a>
+            </div>
           </div>
         </div>
 
@@ -39,8 +45,8 @@
           </div>
           <div>
             <ul>
-              <li>A+</li>
-              <li>A-</li>
+              <li class="plus">A+</li>
+              <li class="moins">A-</li>
             </ul>
           </div>
         </footer>
@@ -51,20 +57,33 @@
           <a href="#home" class="return-to-index">Revenir</a>
         </div>
 
-        <div>
-          <img src="./assets/img/hennessy.jpg" alt="hennessy">
-          <img src="./assets/img/hennessy.jpg" alt="hennessy">
+        <div class="page2__main">
+          <div class="page2__title">
+            <h2>Je me présente...</h2>
+          </div>
+          <div class="page2__content">
+            <div class="paragraphe">
+              <p>Après avoir obtenu mon diplôme de <span>DUT Métier du Multilédia et de l'Internet</span>, je  souhaite poursuivre mes études dans le <span>développement web</span> ou la <span>programmation web</span>. Durant ces deux années à l'IUT d'Angoulême, j'ai appris à être <span>polyvalent</span> que ce soit dans le développement web ou la programmation, mais aussi dans la communication web, la création graphique/photographique, l'audiovisuel et bien d'autres spécialités.
+              Grâce à mes treize années d'apprentissage de la <span>musique</span> et des projets auxquels j'ai pu participer ou créer, j'ai appris à <span>travailler en équipe</span>, à être <span>curieux</span>, à être <span>à l'écoute des autres</span> et à <span>m'adapter aux situations</span> qui se présente à moi.</p>
+            </div>
+            <div class="cv__img">
+              <a href="./assets/docs/CV-portfolio.pdf" target="blank"><img src="./assets/img/img-CV.jpg"></a>
+            </div>
+            <div class="cv__btn">
+              <a href="./assets/docs/CV-portfolio.pdf" target="blank">Mon CV</a>
+            </div>
+          </div>
         </div>
 
-        <footer id="footer-presentation">
+        <footer class="footer__overflow">
            <div>
             <a class="en" href="#lang=en">En</a>
             <a class="fr" href="#lang=fr">Fr</a>
           </div>
           <div>
             <ul>
-              <li>A+</li>
-              <li>A-</li>
+              <li class="plus">A+</li>
+              <li class="moins">A-</li>
             </ul>
           </div>
         </footer>
@@ -82,8 +101,8 @@
           </div>
           <div>
             <ul>
-              <li>A+</li>
-              <li>A-</li>
+              <li class="plus">A+</li>
+              <li class="moins">A-</li>
             </ul>
           </div>
         </footer>
@@ -101,8 +120,8 @@
           </div>
           <div>
             <ul>
-              <li>A+</li>
-              <li>A-</li>
+              <li class="plus">A+</li>
+              <li class="moins">A-</li>
             </ul>
           </div>
         </footer>
@@ -112,7 +131,7 @@
 
   <script src="./assets/js/vendor/jquery-2.1.4.js"></script>
   <script src="./assets/js/lang.js"></script>
-  <script src="./assets/js/app.js"></script>
   <script src="./assets/js/anim.js"></script>
+  <script src="./assets/js/app.js"></script>
   </body>
 </html>

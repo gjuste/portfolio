@@ -21,7 +21,7 @@ var PageAnimationTransitions = (function() {
     animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
     // support css animations
     support = Modernizr.cssanimations;
-  
+
   function init() {
 
     $pages.each( function() {
@@ -42,6 +42,12 @@ var PageAnimationTransitions = (function() {
       nextPage( animcursor );
     });
 
+    $('.page1__photo img').on('click', function() {
+      nb_page = '2';
+      animcursor = 1;
+      nextPage( animcursor );
+    });
+
   }
 
   function nextPage( options ) {
@@ -55,10 +61,11 @@ var PageAnimationTransitions = (function() {
 
     var $currPage = $pages.eq( current );
 
+    Animation.class_remove();
+
     if(nb_page){
       if( nb_page <= pagesCount ) {
         current = nb_page-1;
-        nb_page = null;
       }
       else {
         current = 0;
@@ -103,6 +110,11 @@ var PageAnimationTransitions = (function() {
       onEndAnimation( $currPage, $nextPage );
     }
 
+    if (nb_page === '2' || nb_page === '3' || nb_page === '4') {
+      Animation.page_text_anim();
+    }
+
+    nb_page = null;
   }
 
   function onEndAnimation( $outpage, $inpage ) {
@@ -119,7 +131,7 @@ var PageAnimationTransitions = (function() {
 
   init();
 
-  return { 
+  return {
     init : init,
     nextPage : nextPage,
   };

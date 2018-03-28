@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" class="no-js">
   <head>
-    <!-- http://www.notuxedo.com/google-search-console/ -->
-
+    <meta name="google-site-verification" content="7cygmhQAl9I6ShQdQ2uXuyddLnrb5KqA_yD_CCv8zQU" />
     <title>Portfolio de JUSTE Gaétan</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/app.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
@@ -17,12 +16,22 @@
     <div id="pt-main" class="pt-perspective">
 
       <div class="pt-page pt-page-1">
-        <h1>Mon portfolio</h1>
-        <div>
-          <a href="#presentation" class="pageAnimation" data-page="2">Moi</a>
-          <a href="#realisations" class="pageAnimation" data-page="3">Mes réalisations</a>
-          <a href="#contact" class="pageAnimation" data-page="4">Contactez-moi</a>
+
+        <div id="page1__photo">
+          <img src="assets/img/photo-couv.png" alt="photo_présentation">
         </div>
+        <div id="page1__menu">
+          <div id="page1__titre">
+            <h1>Mon portfolio</h1>
+            <h2>par Gaétan Juste</h2>
+          </div>
+          <div id="page1__lien">
+            <a href="#presentation" class="pageAnimation" data-page="2">A PROPOS</a>
+            <a href="#realisations" class="pageAnimation" data-page="3">MES RÉALISATIONS</a>
+            <a href="#contact" class="pageAnimation" data-page="4">CONTACTEZ-MOI</a>
+          </div>
+        </div>
+
         <footer>
           <div>
             <a class="en" href="#lang=en">En</a>
@@ -41,10 +50,12 @@
         <div class="return">  
           <a href="#home" class="return-to-index">Revenir</a>
         </div>
+
         <div>
           <img src="./assets/img/hennessy.jpg" alt="hennessy">
           <img src="./assets/img/hennessy.jpg" alt="hennessy">
         </div>
+
         <footer id="footer-presentation">
           <div>
             <a class="en" href="#lang=en">En</a>
@@ -57,6 +68,7 @@
         <div class="return">  
           <a href="#home" class="return-to-index">Revenir</a>
         </div>
+
         <footer>
           <div>
             <a class="en" href="#lang=en">En</a>
@@ -69,6 +81,7 @@
         <div class="return">  
           <a href="#home" class="return-to-index">Revenir</a>
         </div>
+
         <footer>
           <div>
             <a class="en" href="#lang=en">En</a>
@@ -77,11 +90,11 @@
         </footer>
       </div>
 
-
     </div>
 
   <script src="./assets/js/vendor/jquery-2.1.4.js"></script>
   <script src="./assets/js/lang.js"></script>
   <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/anim.js"></script>
   </body>
 </html>

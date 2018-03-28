@@ -1,1 +1,4 @@
-http://robots-txt.com/
+User-agent: *
+Disallow: /JS
+Disallow: /gallery.fr
+Disallow: /bourse

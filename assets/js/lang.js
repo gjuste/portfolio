@@ -35,7 +35,9 @@ var lang = function() {
 					}
 					else {
 						if (data[i].balise) {
-							$(data[i].balise).text(data[i].texte);
+							if (data[i].texte !== "") {
+								$(data[i].balise).text(data[i].texte);
+							}
 						}
 					}
 				}
